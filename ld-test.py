@@ -10,5 +10,5 @@ ld_client = ldclient.get()
 show_feature = ld_client.variation(FLAG_KEY, {"key": "user@test.com"}, False)
 print(show_feature)
 
-#ldclient.get().flush()
-ldclient.get().close()
+ldclient.get().flush()
+#ldclient.get().close() # If you uncomment this LD updates the 'Evaluated ...' string correctly
